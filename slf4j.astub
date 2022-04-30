@@ -1,0 +1,194 @@
+package org.slf4j;
+
+import org.slf4j.event.Level;
+
+import org.checkerframework.dataflow.qual.SideEffectFree;
+
+public interface Logger {
+
+    final public String ROOT_LOGGER_NAME = "ROOT";
+
+    @SideEffectFree
+    public String getName();
+
+    @SideEffectFree
+    public boolean isTraceEnabled();
+
+    @SideEffectFree
+    public void trace(String msg);
+
+    @SideEffectFree
+    public void trace(String format, Object arg);
+
+    @SideEffectFree
+    public void trace(String format, Object arg1, Object arg2);
+
+    @SideEffectFree
+    public void trace(String format, Object... arguments);
+
+    @SideEffectFree
+    public void trace(String msg, Throwable t);
+
+    @SideEffectFree
+    public boolean isTraceEnabled(Marker marker);
+
+    @SideEffectFree
+    public void trace(Marker marker, String msg);
+
+    @SideEffectFree
+    public void trace(Marker marker, String format, Object arg);
+
+    @SideEffectFree
+    public void trace(Marker marker, String format, Object arg1, Object arg2);
+
+    @SideEffectFree
+    public void trace(Marker marker, String format, Object... argArray);
+
+    @SideEffectFree
+    public void trace(Marker marker, String msg, Throwable t);
+
+    @SideEffectFree
+    public boolean isDebugEnabled();
+
+    @SideEffectFree
+    public void debug(String msg);
+
+    @SideEffectFree
+    public void debug(String format, Object arg);
+
+    @SideEffectFree
+    public void debug(String format, Object arg1, Object arg2);
+
+    @SideEffectFree
+    public void debug(String format, Object... arguments);
+
+    @SideEffectFree
+    public void debug(String msg, Throwable t);
+
+    @SideEffectFree
+    public boolean isDebugEnabled(Marker marker);
+
+    @SideEffectFree
+    public void debug(Marker marker, String msg);
+
+    @SideEffectFree
+    public void debug(Marker marker, String format, Object arg);
+
+    @SideEffectFree
+    public void debug(Marker marker, String format, Object arg1, Object arg2);
+
+    @SideEffectFree
+    public void debug(Marker marker, String format, Object... arguments);
+
+    @SideEffectFree
+    public void debug(Marker marker, String msg, Throwable t);
+
+    @SideEffectFree
+    public boolean isInfoEnabled();
+
+    @SideEffectFree
+    public void info(String msg);
+
+    @SideEffectFree
+    public void info(String format, Object arg);
+
+    @SideEffectFree
+    public void info(String format, Object arg1, Object arg2);
+
+    @SideEffectFree
+    public void info(String format, Object... arguments);
+
+    @SideEffectFree
+    public void info(String msg, Throwable t);
+
+    @SideEffectFree
+    public boolean isInfoEnabled(Marker marker);
+
+    @SideEffectFree
+    public void info(Marker marker, String msg);
+
+    @SideEffectFree
+    public void info(Marker marker, String format, Object arg);
+
+    @SideEffectFree
+    public void info(Marker marker, String format, Object arg1, Object arg2);
+
+    @SideEffectFree
+    public void info(Marker marker, String format, Object... arguments);
+
+    @SideEffectFree
+    public void info(Marker marker, String msg, Throwable t);
+
+    @SideEffectFree
+    public boolean isWarnEnabled();
+
+    @SideEffectFree
+    public void warn(String msg);
+
+    @SideEffectFree
+    public void warn(String format, Object arg);
+
+    @SideEffectFree
+    public void warn(String format, Object... arguments);
+
+    @SideEffectFree
+    public void warn(String format, Object arg1, Object arg2);
+
+    @SideEffectFree
+    public void warn(String msg, Throwable t);
+
+    @SideEffectFree
+    public boolean isWarnEnabled(Marker marker);
+
+    @SideEffectFree
+    public void warn(Marker marker, String msg);
+
+    @SideEffectFree
+    public void warn(Marker marker, String format, Object arg);
+
+    @SideEffectFree
+    public void warn(Marker marker, String format, Object arg1, Object arg2);
+
+    @SideEffectFree
+    public void warn(Marker marker, String format, Object... arguments);
+
+    @SideEffectFree
+    public void warn(Marker marker, String msg, Throwable t);
+
+    @SideEffectFree
+    public boolean isErrorEnabled();
+
+    @SideEffectFree
+    public void error(String msg);
+
+    @SideEffectFree
+    public void error(String format, Object arg);
+
+    @SideEffectFree
+    public void error(String format, Object arg1, Object arg2);
+
+    @SideEffectFree
+    public void error(String format, Object... arguments);
+
+    @SideEffectFree
+    public void error(String msg, Throwable t);
+
+    @SideEffectFree
+    public boolean isErrorEnabled(Marker marker);
+
+    @SideEffectFree
+    public void error(Marker marker, String msg);
+
+    @SideEffectFree
+    public void error(Marker marker, String format, Object arg);
+
+    @SideEffectFree
+    public void error(Marker marker, String format, Object arg1, Object arg2);
+
+    @SideEffectFree
+    public void error(Marker marker, String format, Object... arguments);
+
+    @SideEffectFree
+    public void error(Marker marker, String msg, Throwable t);
+
+}

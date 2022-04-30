@@ -1,0 +1,18 @@
+package reactor.core.publisher;
+
+import java.util.function.Function;
+import reactor.core.CorePublisher;
+
+import org.checkerframework.checker.nullness.qual.Nullable;
+
+public abstract class Mono<T> implements CorePublisher<T> {
+
+    public final <R> Mono<R> mapNotNull(Function <? super T, ? extends @Nullable R> mapper);
+
+}
+
+public abstract class Flux<T> implements CorePublisher<T> {
+
+    public final <V> Flux<V> mapNotNull(Function <? super T, ? extends @Nullable V> mapper);
+
+}
