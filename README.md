@@ -43,3 +43,7 @@ Note that these are not *complete* stubs for their libraries, only the parts tha
     ```
 
     Of course, there are ways around this, such as checking again if `obj` is `null` or using `NullnessUtil`, but it just means more and more boilerplate. Since the chance of `logger` actually changing any visible program state is, as aforementioned, effectively nil (as far as the programmer is concerned), it makes more sense to make these methods `@SideEffectFree` than not.
+
+- [youtube.astub](./youtube.astub):
+
+    Adds [@Nullable](https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html) to the last parameter of the `Youtube.Builder` constructor, as per the specification.
