@@ -47,3 +47,7 @@ Note that these are not *complete* stubs for their libraries, only the parts tha
 - [youtube.astub](./youtube.astub):
 
     Adds [@Nullable](https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html) to the last parameter of the `Youtube.Builder` constructor, as per the specification.
+
+- [discord4j.astub](./discord4j.astub):
+
+    Adds purity annotations ([@SideEffectFree](https://checkerframework.org/api/org/checkerframework/dataflow/qual/SideEffectFree.html) and [@Pure](https://checkerframework.org/api/org/checkerframework/dataflow/qual/Pure.html)) to the [Snowflake](https://www.javadoc.io/doc/com.discord4j/discord4j-core/3.0.1/discord4j/core/object/util/Snowflake.html) methods, as they are all simple type conversions.

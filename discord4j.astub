@@ -1,0 +1,52 @@
+package discord4j.common.util;
+
+import java.math.BigInteger;
+import java.time.Instant;
+
+import discord4j.discordjson.Id;
+
+import org.checkerframework.dataflow.qual.SideEffectFree;
+import org.checkerframework.dataflow.qual.Pure;
+
+public final class Snowflake implements Comparable<Snowflake> {
+
+    @SideEffectFree
+    public static Snowflake of(final long id);
+
+    @SideEffectFree
+    public static Snowflake of(final String id);
+
+    @SideEffectFree
+    public static Snowflake of(final Instant timestamp);
+
+    @SideEffectFree
+    public static Snowflake of(final BigInteger id);
+
+    @SideEffectFree
+    public static Snowflake of(final Id id);
+
+    @SideEffectFree
+    public static long asLong(final String id);
+
+    @SideEffectFree
+    public static long asLong(final Id id);
+
+    @SideEffectFree
+    public static String asString(final long id);
+
+    @SideEffectFree
+    private Snowflake(final long id);
+
+    @Pure
+    public long asLong();
+
+    @SideEffectFree
+    public String asString();
+
+    @SideEffectFree
+    public Instant getTimestamp();
+
+    @SideEffectFree
+    public BigInteger asBigInteger();
+
+}
