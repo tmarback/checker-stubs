@@ -6,6 +6,12 @@ To use, copy these files in a directory somewhere and specify `-Astubs=path/to/s
 
 Note that these are not *complete* stubs for their libraries, only the parts that cause the most problems.
 
+Also note that, if you're not using all of these libraries, by default Checker will warn about missing classes in the stubs. To get rid of them, either:
+
+- Add the `-AstubWarnIfNotFoundIgnoresClasses` command line option
+- Specify the individual stub files you need in `-Astubs` (instead of the whole directory)
+- Remove the files you don't need
+
 ## Provided stub files
 
 - [reactor.astub](./reactor.astub):

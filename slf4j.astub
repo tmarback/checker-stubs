@@ -1,7 +1,5 @@
 package org.slf4j;
 
-import org.slf4j.event.Level;
-
 import org.checkerframework.dataflow.qual.SideEffectFree;
 
 public interface Logger {
