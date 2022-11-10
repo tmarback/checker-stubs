@@ -57,3 +57,7 @@ Also note that, if you're not using all of these libraries, by default Checker w
 - [discord4j.astub](./discord4j.astub):
 
     Adds purity annotations ([@SideEffectFree](https://checkerframework.org/api/org/checkerframework/dataflow/qual/SideEffectFree.html) and [@Pure](https://checkerframework.org/api/org/checkerframework/dataflow/qual/Pure.html)) to the [Snowflake](https://www.javadoc.io/doc/com.discord4j/discord4j-core/3.0.1/discord4j/core/object/util/Snowflake.html) methods, as they are all simple type conversions.
+
+- [commons-io.astub](./commons-io.astub):
+
+    Makes [AutoCloseInputStream](https://commons.apache.org/proper/commons-io/javadocs/api-release/org/apache/commons/io/input/AutoCloseInputStream.html) [own](https://checkerframework.org/api/org/checkerframework/checker/mustcall/qual/Owning.html) the stream it wraps, so the client code does not get an error due to not closing the wrapped stream. Also resets the [@MustCall](https://checkerframework.org/api/org/checkerframework/checker/mustcall/qual/MustCall.html) on the class to empty, as it already closes itself so `close()` doesn't need to be called.

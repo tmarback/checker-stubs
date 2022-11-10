@@ -1,0 +1,11 @@
+package org.apache.commons.io.input;
+
+import org.checkerframework.checker.mustcall.qual.MustCall;
+import org.checkerframework.checker.mustcall.qual.Owning;
+
+@MustCall({})
+public class AutoCloseInputStream extends ProxyInputStream {
+
+    public AutoCloseInputStream(final @Owning InputStream in);
+
+}
