@@ -1,0 +1,9 @@
+package java.util;
+
+import org.checkerframework.checker.optional.qual.MaybePresent;
+
+public final class Optional<T> {
+
+    public <X extends Throwable> T orElseThrow(@MaybePresent Optional<T> this, Supplier<? extends X> arg0) throws Throwable;
+
+}

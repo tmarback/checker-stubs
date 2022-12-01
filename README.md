@@ -14,6 +14,12 @@ Also note that, if you're not using all of these libraries, by default Checker w
 
 ## Provided stub files
 
+- [java.astub](./java.astub):
+
+    Assorted modifications to the default annotated JDK. Changes are:
+
+    - Changes [Optional.orElseThrow()](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#orElseThrow(java.util.function.Supplier)) to be callable on a [@MaybePresent](https://checkerframework.org/api/org/checkerframework/checker/optional/qual/MaybePresent.html) receiver. IMO it makes no sense to restrict this method, if the programmer is explicitly throwing an exception that's an indication that they _want_ to throw an exception if the optional is empty (which is a perfectly valid way of handling it), and the checker shouldn't second-guess that.
+
 - [reactor.astub](./reactor.astub):
 
     Adds [@Nullable](https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html) to the return type in the function argument of the `mapNotNull()` method of [Reactor's](https://projectreactor.io/) [Mono](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#mapNotNull-java.util.function.Function-) and [Flux](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#mapNotNull-java.util.function.Function-) types. The whole point of that method is to allow the function to return `null`, so not having this annotation does not make sense.
