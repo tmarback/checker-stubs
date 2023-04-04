@@ -56,6 +56,8 @@ Also note that, if you're not using all of these libraries, by default Checker w
 
     Of course, there are ways around this, such as checking again if `obj` is `null` or using `NullnessUtil`, but it just means more and more boilerplate. Since the chance of `logger` actually changing any visible program state is, as aforementioned, effectively nil (as far as the programmer is concerned), it makes more sense to make these methods `@SideEffectFree` than not.
 
+    Also, changes the object args of logging methods to accept null values, because they do.
+
 - [youtube.astub](./youtube.astub):
 
     Adds [@Nullable](https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html) to the last parameter of the `Youtube.Builder` constructor, as per the specification.

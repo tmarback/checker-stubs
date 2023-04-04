@@ -1,5 +1,6 @@
 package org.slf4j;
 
+import org.checkerframework.checker.nullness.qual.Nullable;
 import org.checkerframework.dataflow.qual.SideEffectFree;
 
 public interface Logger {
@@ -16,13 +17,13 @@ public interface Logger {
     public void trace(String msg);
 
     @SideEffectFree
-    public void trace(String format, Object arg);
+    public void trace(String format, @Nullable Object arg);
 
     @SideEffectFree
-    public void trace(String format, Object arg1, Object arg2);
+    public void trace(String format, @Nullable Object arg1, @Nullable Object arg2);
 
     @SideEffectFree
-    public void trace(String format, Object... arguments);
+    public void trace(String format, @Nullable Object... arguments);
 
     @SideEffectFree
     public void trace(String msg, Throwable t);
@@ -34,13 +35,13 @@ public interface Logger {
     public void trace(Marker marker, String msg);
 
     @SideEffectFree
-    public void trace(Marker marker, String format, Object arg);
+    public void trace(Marker marker, String format, @Nullable Object arg);
 
     @SideEffectFree
-    public void trace(Marker marker, String format, Object arg1, Object arg2);
+    public void trace(Marker marker, String format, @Nullable Object arg1, Object arg2);
 
     @SideEffectFree
-    public void trace(Marker marker, String format, Object... argArray);
+    public void trace(Marker marker, String format, @Nullable Object... argArray);
 
     @SideEffectFree
     public void trace(Marker marker, String msg, Throwable t);
@@ -52,13 +53,13 @@ public interface Logger {
     public void debug(String msg);
 
     @SideEffectFree
-    public void debug(String format, Object arg);
+    public void debug(String format, @Nullable Object arg);
 
     @SideEffectFree
-    public void debug(String format, Object arg1, Object arg2);
+    public void debug(String format, @Nullable Object arg1, @Nullable Object arg2);
 
     @SideEffectFree
-    public void debug(String format, Object... arguments);
+    public void debug(String format, @Nullable Object... arguments);
 
     @SideEffectFree
     public void debug(String msg, Throwable t);
@@ -70,13 +71,13 @@ public interface Logger {
     public void debug(Marker marker, String msg);
 
     @SideEffectFree
-    public void debug(Marker marker, String format, Object arg);
+    public void debug(Marker marker, String format, @Nullable Object arg);
 
     @SideEffectFree
-    public void debug(Marker marker, String format, Object arg1, Object arg2);
+    public void debug(Marker marker, String format, @Nullable Object arg1, @Nullable Object arg2);
 
     @SideEffectFree
-    public void debug(Marker marker, String format, Object... arguments);
+    public void debug(Marker marker, String format, @Nullable Object... arguments);
 
     @SideEffectFree
     public void debug(Marker marker, String msg, Throwable t);
@@ -88,13 +89,13 @@ public interface Logger {
     public void info(String msg);
 
     @SideEffectFree
-    public void info(String format, Object arg);
+    public void info(String format, @Nullable Object arg);
 
     @SideEffectFree
-    public void info(String format, Object arg1, Object arg2);
+    public void info(String format, @Nullable Object arg1, @Nullable Object arg2);
 
     @SideEffectFree
-    public void info(String format, Object... arguments);
+    public void info(String format, @Nullable Object... arguments);
 
     @SideEffectFree
     public void info(String msg, Throwable t);
@@ -106,13 +107,13 @@ public interface Logger {
     public void info(Marker marker, String msg);
 
     @SideEffectFree
-    public void info(Marker marker, String format, Object arg);
+    public void info(Marker marker, String format, @Nullable Object arg);
 
     @SideEffectFree
-    public void info(Marker marker, String format, Object arg1, Object arg2);
+    public void info(Marker marker, String format, @Nullable Object arg1, @Nullable Object arg2);
 
     @SideEffectFree
-    public void info(Marker marker, String format, Object... arguments);
+    public void info(Marker marker, String format, @Nullable Object... arguments);
 
     @SideEffectFree
     public void info(Marker marker, String msg, Throwable t);
@@ -124,13 +125,13 @@ public interface Logger {
     public void warn(String msg);
 
     @SideEffectFree
-    public void warn(String format, Object arg);
+    public void warn(String format, @Nullable Object arg);
 
     @SideEffectFree
-    public void warn(String format, Object... arguments);
+    public void warn(String format, @Nullable Object... arguments);
 
     @SideEffectFree
-    public void warn(String format, Object arg1, Object arg2);
+    public void warn(String format, @Nullable Object arg1, @Nullable Object arg2);
 
     @SideEffectFree
     public void warn(String msg, Throwable t);
@@ -142,13 +143,13 @@ public interface Logger {
     public void warn(Marker marker, String msg);
 
     @SideEffectFree
-    public void warn(Marker marker, String format, Object arg);
+    public void warn(Marker marker, String format, @Nullable Object arg);
 
     @SideEffectFree
-    public void warn(Marker marker, String format, Object arg1, Object arg2);
+    public void warn(Marker marker, String format, @Nullable Object arg1, @Nullable Object arg2);
 
     @SideEffectFree
-    public void warn(Marker marker, String format, Object... arguments);
+    public void warn(Marker marker, String format, @Nullable Object... arguments);
 
     @SideEffectFree
     public void warn(Marker marker, String msg, Throwable t);
@@ -160,13 +161,13 @@ public interface Logger {
     public void error(String msg);
 
     @SideEffectFree
-    public void error(String format, Object arg);
+    public void error(String format, @Nullable Object arg);
 
     @SideEffectFree
-    public void error(String format, Object arg1, Object arg2);
+    public void error(String format, @Nullable Object arg1, @Nullable Object arg2);
 
     @SideEffectFree
-    public void error(String format, Object... arguments);
+    public void error(String format, @Nullable Object... arguments);
 
     @SideEffectFree
     public void error(String msg, Throwable t);
@@ -178,13 +179,13 @@ public interface Logger {
     public void error(Marker marker, String msg);
 
     @SideEffectFree
-    public void error(Marker marker, String format, Object arg);
+    public void error(Marker marker, String format, @Nullable Object arg);
 
     @SideEffectFree
-    public void error(Marker marker, String format, Object arg1, Object arg2);
+    public void error(Marker marker, String format, @Nullable Object arg1, @Nullable Object arg2);
 
     @SideEffectFree
-    public void error(Marker marker, String format, Object... arguments);
+    public void error(Marker marker, String format, @Nullable Object... arguments);
 
     @SideEffectFree
     public void error(Marker marker, String msg, Throwable t);
