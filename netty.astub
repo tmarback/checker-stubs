@@ -1,0 +1,11 @@
+package io.netty.handler.codec.http;
+
+import org.checkerframework.checker.nullness.qual.Nullable;
+
+public final class HttpUtil {
+
+    public static Charset getCharset(@Nullable CharSequence contentTypeValue);
+
+    public static Charset getCharset(@Nullable HttpMessage message, Charset defaultCharset);
+
+}

@@ -24,6 +24,10 @@ Also note that, if you're not using all of these libraries, by default Checker w
 
     Adds [@Nullable](https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html) to the return type in the function argument of the `mapNotNull()` method of [Reactor's](https://projectreactor.io/) [Mono](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#mapNotNull-java.util.function.Function-) and [Flux](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#mapNotNull-java.util.function.Function-) types. The whole point of that method is to allow the function to return `null`, so not having this annotation does not make sense.
 
+- [netty.astub](./netty.astub):
+
+    Adds [@Nullable](https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html) to the first parameter of [HttpUtil.getCharset()](https://netty.io/5.0/api/io.netty5.codec.http/io/netty5/handler/codec/http/HttpUtil.html#getCharset(java.lang.CharSequence)) variants in [Netty](https://netty.io/), as the method does support `null` values.
+
 - [slf4j.astub](./slf4j.astub):
 
     Adds [@SideEffectFree](https://checkerframework.org/api/org/checkerframework/dataflow/qual/SideEffectFree.html) to all the methods of [SLF4J's](https://www.slf4j.org/) [Logger](https://www.slf4j.org/api/org/slf4j/Logger.html) interface. 
