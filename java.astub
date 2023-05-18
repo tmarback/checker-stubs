@@ -7,3 +7,25 @@ public final class Optional<T> {
     public <X extends Throwable> T orElseThrow(@MaybePresent Optional<T> this, Supplier<? extends X> arg0) throws Throwable;
 
 }
+
+package java.awt.image;
+
+import org.checkerframework.checker.nullness.qual.Nullable;
+
+public interface BufferedImageOp {
+
+    public BufferedImage filter(BufferedImage src, @Nullable BufferedImage dest);
+
+}
+
+public class AffineTransformOp implements BufferedImageOp, RasterOp {
+
+    public final BufferedImage filter(BufferedImage src, @Nullable BufferedImage dst);
+
+}
+
+public class ConvolveOp implements BufferedImageOp, RasterOp {
+
+    public final BufferedImage filter (BufferedImage src, @Nullable BufferedImage dst);
+
+}
