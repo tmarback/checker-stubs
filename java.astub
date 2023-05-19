@@ -26,6 +26,20 @@ public class AffineTransformOp implements BufferedImageOp, RasterOp {
 
 public class ConvolveOp implements BufferedImageOp, RasterOp {
 
-    public final BufferedImage filter (BufferedImage src, @Nullable BufferedImage dst);
+    public final BufferedImage filter(BufferedImage src, @Nullable BufferedImage dst);
+
+}
+
+public class ColorConvertOp implements BufferedImageOp, RasterOp {
+
+    public final BufferedImage filter(BufferedImage src, @Nullable BufferedImage dst);
+
+    public ColorConvertOp(@Nullable RenderingHints hints);
+
+    public ColorConvertOp(ColorSpace cspace, @Nullable RenderingHints hints);
+
+    public ColorConvertOp(ColorSpace srcCspace, ColorSpace dstCspace, @Nullable RenderingHints hints);
+
+    public ColorConvertOp(ICC_Profile[] profiles, @Nullable RenderingHints hints);
 
 }
