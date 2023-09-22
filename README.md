@@ -19,7 +19,7 @@ Also note that, if you're not using all of these libraries, by default Checker w
     Assorted modifications to the default annotated JDK. Changes are:
 
     - Changes [Optional.orElseThrow()](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#orElseThrow(java.util.function.Supplier)) to be callable on a [@MaybePresent](https://checkerframework.org/api/org/checkerframework/checker/optional/qual/MaybePresent.html) receiver. IMO it makes no sense to restrict this method, if the programmer is explicitly throwing an exception that's an indication that they _want_ to throw an exception if the optional is empty (which is a perfectly valid way of handling it), and the checker shouldn't second-guess that.
-    - Add [@Nullable](https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html) to some parameters in `java.awt.image` class methods that accept `null`.
+    - Add [@Nullable](https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html) to some parameters in `java.awt` class methods that accept `null`.
 
 - [reactor.astub](./reactor.astub):
 
