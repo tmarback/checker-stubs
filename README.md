@@ -23,7 +23,9 @@ Also note that, if you're not using all of these libraries, by default Checker w
 
 - [reactor.astub](./reactor.astub):
 
-    Adds [@Nullable](https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html) to the return type in the function argument of the `mapNotNull()` method of [Reactor's](https://projectreactor.io/) [Mono](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#mapNotNull-java.util.function.Function-) and [Flux](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#mapNotNull-java.util.function.Function-) types. The whole point of that method is to allow the function to return `null`, so not having this annotation does not make sense.
+    - Adds [@Nullable](https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html) to the return type in the function argument of the `mapNotNull()` method of [Reactor's](https://projectreactor.io/) [Mono](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#mapNotNull-java.util.function.Function-) and [Flux](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#mapNotNull-java.util.function.Function-) types. The whole point of that method is to allow the function to return `null`, so not having this annotation does not make sense.
+    - Adds [@MustCallUnknown](https://checkerframework.org/api/org/checkerframework/checker/mustcall/qual/MustCallUnknown.html) bound to the type parameter of [Mono](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#mapNotNull-java.util.function.Function-) and [Flux](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#mapNotNull-java.util.function.Function-).
+
 
 - [netty.astub](./netty.astub):
 
